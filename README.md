@@ -23,12 +23,9 @@
 * npm start
     * Compiles your files, starts watching files for changes, serves static files to port 9001
 * npm run build
-    * Builds everything
-
-# Production build
-Minification, uglification and other tasks you're expected to run before deploying your product can be made by running the build command with env variable NODE_ENV set to "production"
-
-    NODE_ENV=production npm run build
+    * Builds everything (production)
+* npm run build:dev
+    * Builds everything (development)
 
 ## Development guidelines
 #### Directory structure

@@ -13,7 +13,7 @@ global.$ = require("gulp-load-plugins")();
 
 // eslint "no-process-env":0
 //noinspection JSUnresolvedVariable
-const production = $.util.env.prod || process.env.NODE_ENV === 'production';
+const production = $.util.env.prod;
 
 const config = require('./package.json').build;
 
