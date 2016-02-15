@@ -8,6 +8,7 @@ import exorcist from 'exorcist';
 import transform from 'vinyl-transform';
 import watchify from 'watchify';
 import livereactload from 'livereactload';
+import historyApiFallback from 'connect-history-api-fallback';
 
 global.$ = require("gulp-load-plugins")();
 
@@ -123,7 +124,8 @@ gulp.task('server', () => {
         notify:    false,
         ghostMode: false,
         server:    {
-            baseDir: config.destination
+            baseDir:    config.destination,
+            middleware: [historyApiFallback()]
         }
     });
 });
